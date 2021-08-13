@@ -4,26 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LoginSingup.LoginFragment"
-    android:background="@color/black">
+    tools:context=".LoginSingup.LoginFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="@dimen/_16sdp"
+        android:background="@color/grey_500">
 
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/login_back_btn"
+    android:background="@drawable/ic_baseline_arrow_back_24"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_140sdp"
             android:layout_height="wrap_content"
             android:id="@+id/registration_txt"
-            android:textColor="@color/white"
-            android:text="Registration"
-            style="@style/roboto_bold"
+            android:textColor="@color/black"
+            android:text="@string/log_in"
+            style="@style/sourcesanspro_semibold"
             android:textSize="@dimen/_30sdp"
-            app:layout_constraintTop_toTopOf="parent"
-             app:layout_constraintBottom_toTopOf="@+id/logIn_detail_container"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintBottom_toTopOf="@+id/signUp_detail_container"
+            />
 
 
 
@@ -35,69 +44,98 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:paddingHorizontal="@dimen/_16sdp"
-           >
+            app:layout_constraintBottom_toBottomOf="parent">
 
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/name"
-                style="@style/roboto_regular"
-                android:hint="Enter Your name"
-                android:gravity="center"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"
-                />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/email"
-                android:hint="abc@gmail.com"
-                android:gravity="center"
-                style="@style/roboto_regular"
-                android:textColorHint="@color/white"
+                style="@style/sourcsanspro_regular"
+                android:padding="@dimen/_16sdp"
+                android:hint="@string/abc_gmail_com"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textAlignment="textStart"
+                android:textColorHint="@color/black"
                 android:textColor="@color/white"
                 />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/password"
-                android:hint="password"
-                android:gravity="center"
-                style="@style/roboto_regular"
-                android:textColorHint="@color/white"
+                style="@style/sourcsanspro_regular"
+                android:padding="@dimen/_16sdp"
+                android:hint="@string/password"
+                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textAlignment="textStart"
+                android:textColorHint="@color/black"
                 android:textColor="@color/white"
                 />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/re_enter_password"
-                android:hint="password"
-                android:gravity="center"
-                style="@style/roboto_regular"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"
-                />
+
         </LinearLayout>
 
-        <com.google.android.material.button.MaterialButton
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SignUp"
-            style="@style/roboto_bold"
-            app:cornerRadius="@dimen/_30sdp"
+            android:orientation="horizontal"
+            android:id="@+id/signUp_terms_container"
+            android:padding="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@+id/signUp_detail_container"
+            app:layout_constraintLeft_toLeftOf="@+id/signUp_detail_container">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_btn"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/terms_white_part1"
+                style="@style/sourcsanspro_regular"
+                android:text="Remember me"
+                android:layout_weight="2"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/terms_red_part2"
+                android:text="@string/forget_password"
+                android:paddingStart="@dimen/_4sdp"
+                android:layout_weight="1"
+                style="@style/sourcsanspro_regular"
+                android:textColor="@color/red"
+                />
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signUp_btn"
+            style="@style/sourcesanspro_semibold"
+            android:text="Sign In"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/round"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:paddingVertical="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/signUp_detail_container"
+            app:layout_constraintTop_toBottomOf="@+id/signUp_terms_container"
 
-        />
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </FrameLayout>

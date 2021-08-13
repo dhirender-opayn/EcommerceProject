@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="roboto_bold">
-        <item name="android:fontFamily">@font/roboto_bold</item>
+    <style name="sourcesanspro_bold">
+        <item name="android:fontFamily">@font/sourcesanspro_bold</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="roboto_regular">
-        <item name="android:fontFamily">@font/roboto_regular</item>
+    <style name="sourcsanspro_regular">
+        <item name="android:fontFamily">@font/sourcsanspro_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="sourcesanspro_semibold">
+        <item name="android:fontFamily">@font/sourcesanspro_semibold</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 

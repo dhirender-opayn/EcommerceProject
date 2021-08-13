@@ -3,12 +3,164 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginSingup.SignUpFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:padding="@dimen/_16sdp"
+        android:background="@color/grey_500">
+
+
+
+
+        <TextView
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/registration_txt"
+            android:textColor="@color/white"
+            android:text="@string/create_an_account"
+            style="@style/sourcesanspro_semibold"
+            android:textSize="@dimen/_30sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/signUp_detail_container"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signUp_detail_container"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            >
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:padding="@dimen/_16sdp"
+                style="@style/sourcsanspro_regular"
+                android:hint="@string/enter_your_name"
+                android:textAlignment="textStart"
+                android:drawablePadding="@dimen/_6sdp"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                style="@style/sourcsanspro_regular"
+                android:padding="@dimen/_16sdp"
+                android:hint="@string/abc_gmail_com"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textAlignment="textStart"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password"
+                style="@style/sourcsanspro_regular"
+                android:padding="@dimen/_16sdp"
+                android:hint="@string/password"
+                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textAlignment="textStart"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/signUp_terms_container"
+            app:layout_constraintTop_toBottomOf="@+id/signUp_detail_container"
+            app:layout_constraintLeft_toLeftOf="@+id/signUp_detail_container">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_btn"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/terms_white_part1"
+                style="@style/sourcsanspro_regular"
+                android:text="@string/agree_to_the"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/terms_red_part2"
+                style="@style/sourcsanspro_regular"
+                android:paddingStart="@dimen/_4sdp"
+                android:text="Terms &amp; Conditions"
+                android:textColor="@color/red"
+                />
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signUp_btn"
+            style="@style/sourcesanspro_semibold"
+            android:text="@string/signup"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/round"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingVertical="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/signUp_terms_container"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/signUp_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingTop="@dimen/_8sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/already_account_1"
+                style="@style/sourcsanspro_regular"
+                android:text="@string/already_have_an_account"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/already_account_2"
+                style="@style/sourcsanspro_regular"
+                android:paddingStart="@dimen/_4sdp"
+                android:text="@string/log_in"
+                android:textStyle="italic"
+                android:textColor="@color/grey_700" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>
